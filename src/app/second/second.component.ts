@@ -16,7 +16,7 @@ export class SecondComponent implements OnInit, OnDestroy {
   constructor(private sharedService: SharedserviceService) { }
 
   ngOnInit() {
-    this.subs.sink =  this.sharedService.passtheValueObservable.subscribe((data) => {
+    this.subs.sink =  this.sharedService.passtheValueObservable$.subscribe((data) => {
     this.subjectValue = data;
   });
   }

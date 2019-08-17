@@ -6,7 +6,7 @@ import { Subject, BehaviorSubject } from 'rxjs';
 })
 export class SharedserviceService {
   private passtheValueSubject = new BehaviorSubject<any>(null);
-  passtheValueObservable = this.passtheValueSubject.asObservable();
+  passtheValueObservable$ = this.passtheValueSubject.asObservable();
   constructor() { }
   passTheValue(value: string){
     this.passtheValueSubject.next(value);
